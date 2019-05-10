@@ -3,8 +3,10 @@
 """
 Created on Wed May  8 17:37:18 2019
 
-@author: alejandrovillasmil
+@author: alejandro villasmil & christian de abreu
 """
+
+
 
 import autograd.numpy as np
 
