@@ -3,8 +3,9 @@
 """
 Created on Wed May  8 18:02:30 2019
 
-@author: christianduffydeabreu
+@author: alejandro villasmil & christian de abreu
 """
+
 #Import dependencies
 import h5py
 import numpy as np
