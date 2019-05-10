@@ -6,7 +6,7 @@ Created on Wed May  8 17:37:18 2019
 @author: alejandro villasmil & christian de abreu
 """
 
-#Import helper functions
+#Import helper functio #ns
 from Training.training_helpers import*
 from Preprocessing.preprocessing_helpers import*
          
