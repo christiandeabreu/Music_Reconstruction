@@ -5,16 +5,61 @@ Created on Wed May  8 17:37:18 2019
 
 @author: alejandro villasmil & christian de abreu
 """
+#Import dependencies
+import os
+import matplotlib.pyplot as plt
 
-#Import helper functio #ns
-from Training.training_helpers import*
-from Preprocessing.preprocessing_helpers import*
-         
-SR = 23054205
-durationInSec = 11 
+#Import helper functions
+from training_helpers import *
+from preprocessing_helpers import *
 
-data = 32897#inport data here
+#Main 
+if __name__ == "__main__":
+   
+    ######################################################################
+    #                     Importing Audio and EEG Data
+    ######################################################################
 
+    # Get current working directory       
+    cwd = os.getcwd()
+    
+    #Reading audio files 
+    os.chdir(os.path.join(cwd, 'Audio'))
+    audiofile = 'S01_Chim Chim Cheree_lyrics.wav'  #insert the audio file you want to train on
+    #audiofile = 1
+    fs, audio = read_audio(os.path.join(cwd, 'Audio', str(audiofile)))
+    
+    #Reading eeg files
+    os.chdir(os.path.join(cwd, 'EEG'))
+    eeg_data,indices,subjects,targets,meta_data = read_eeg()
+    
+    #Back to main and ready for training
+    os.chdir(cwd)
+    
+    ######################################################################
+    #                            Training Setup
+    ######################################################################
+    
+    
+    
+    
+    
+    ######################################################################
+    #                        Training with Neural Net
+    ######################################################################
+
+
+    
+
+
+    
+
+
+
+
+
+#%%#
+    """
 S3_data = np.zeros((300050, 64))
 for i in np.arange(64):
     S3_ecog_temp = data[1:300001,i]
@@ -43,4 +88,4 @@ for i in np.arange(64):
     R = [R feat_temp]
 
 R_final = R;
-     
+"""

@@ -63,19 +63,19 @@ def aveFreqDomain(X,SR):
             begin = begin[0]
             stop = np.nonzero(np.floor(f) == 115)
             stop = stop[0]
-            y(3) = np.mean(P1[begin:stop+1])
+            y[2] = np.mean(P1[begin:stop+1])
         elif i == 4:
             begin = np.nonzero(np.floor(f) == 125)
             begin = begin[0]
             stop = np.nonzero(np.floor(f) == 160)
             stop = stop[0]
-            y(4) = np.mean(P1[begin:stop+1])
+            y[3] = np.mean(P1[begin:stop+1])
         elif i == 5:
             begin = np.nonzero(np.floor(f) == 160)
             begin = begin[0]
             stop = np.nonzero(np.floor(f) == 175)
             stop = stop[0]
-            y(5) = np.mean(P1[begin:stop+1])
+            y[4] = np.mean(P1[begin:stop+1])
             
     return y
 

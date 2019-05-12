@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 Created on Wed May  8 18:02:30 2019
@@ -11,8 +11,9 @@ import h5py
 import pickle
 import gzip
 from scipy.signal import decimate
+from scipy.io import wavfile
 
-#Read: function that reads in HDF5 files
+#Read:_EEG function that reads in HDF5 files
 def read_eeg():
     #Reading in Preprocessed Data
     filename = 'OpenMIIR-Perception-512Hz.hdf5'
@@ -35,12 +36,16 @@ def read_eeg():
     h = gzip.open('OpenMIIR-Perception-512Hz.hdf5.meta.pklz','rb')
     meta_data = pickle.load(h)
     
+    #Returning all variables
     return data,indices,subjects,targets,meta_data
 
-def red_audio(audio_path):
+#Read_audio: function that reads in audio file from provided path
+def read_audio(audio_path):
+    fs, data = wavfile.read(audio_path)
+    return fs, data
     
-    
-
-def downsample(signal):
-    
+#
+def downsample(audio, factor):
+    down = decimate(audio, factor, ftype='iir', axis=-1, zero_phase=True)
+    return down
     
