@@ -3,7 +3,7 @@
 """
 Created on Wed May  8 18:02:30 2019
 
-@author: alejandro villasmil & christian de abreu
+@author: alejandro villasmil & christiandeabreu
 """
 
 #Import dependencies
@@ -44,8 +44,7 @@ def read_audio(audio_path):
     fs, data = wavfile.read(audio_path)
     return fs, data
     
-#
+#Downsample audio test data
 def downsample(audio, factor):
     down = decimate(audio, factor, ftype='iir', axis=-1, zero_phase=True)
     return down
-    

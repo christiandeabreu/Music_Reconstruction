@@ -3,10 +3,8 @@
 """
 Created on Wed May  8 17:37:18 2019
 
-@author: alejandrovillasmil
+@author: alejandrovillasmil & christiandeabreu
 """
-
-
 import torch
 from torch.autograd import Variable
 import torch.nn as nn
